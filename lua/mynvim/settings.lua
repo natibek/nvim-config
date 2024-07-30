@@ -28,4 +28,4 @@ o.termguicolors = true
 o.colorcolumn = "100"
 
 global.mapleader = " "
-
+global.barbar_auto_setup = false

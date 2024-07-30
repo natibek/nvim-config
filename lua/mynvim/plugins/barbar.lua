@@ -10,24 +10,37 @@ return {
 
 			--	vim.g.barbar_auto_setup = false,
 			-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-
+			highlights = {
+				background = {
+					guibg = "#000000",
+				},
+				buffer_visible = {
+					guifg = "#abb2bf", -- Foreground color of visible buffers
+				},
+			},
 			animation = false,
 			insert_at_start = false,
 			clickable = true,
 			focus_on_close = "left",
+			tabpages = true,
 			icons = {
 				gitsigns = {
 					added = { enabled = true, icon = "+" },
 					changed = { enabled = true, icon = "~" },
 					deleted = { enabled = true, icon = "-" },
 				},
+				inactive = { button = "×" },
+				current = { buffer_index = true },
 			},
-
+			no_name_title = "[X]",
 			sidebar_filetypes = {
 				-- Use the default values: {event = 'BufWinLeave', text = '', align = 'left'}
-				NvimTree = true,
 				["neo-tree"] = { event = "BufWipeout" },
 			}, -- …etc.
+			sort = {
+				-- tells barbar to ignore case differences while sorting buffers
+				ignore_case = true,
+			},
 		})
 		local keymap = vim.keymap
 		local opts = { noremap = true, silent = true }
@@ -64,10 +77,10 @@ return {
 		-- Magic buffer-picking mode
 		keymap.set("n", "<C-p>", "<Cmd>BufferPick<CR>", opts)
 		-- Sort automatically by...
-		keymap.set("n", "<Space>bb", "<Cmd>BufferOrderByBufferNumber<CR>", opts)
-		keymap.set("n", "<Space>bn", "<Cmd>BufferOrderByName<CR>", opts)
-		keymap.set("n", "<Space>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
-		keymap.set("n", "<Space>bl", "<Cmd>BufferOrderByLanguage<CR>", opts)
-		keymap.set("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
+		keymap.set("n", "<leader>bb", "<Cmd>BufferOrderByBufferNumber<CR>", opts)
+		keymap.set("n", "<leader>bn", "<Cmd>BufferOrderByName<CR>", opts)
+		keymap.set("n", "<leader>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
+		keymap.set("n", "<leader>bl", "<Cmd>BufferOrderByLanguage<CR>", opts)
+		keymap.set("n", "<leader>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 	end,
 }
