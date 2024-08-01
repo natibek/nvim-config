@@ -1,10 +1,11 @@
 vim.g.mapleader = " "
 
 local function map(mode, lhs, rhs)
-    vim.keymap.set(mode, lhs, rhs, { silent = true })
+	vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
 
-
+-- No highlight
+map("n", "<leader>n", "<CMD>noh<CR>")
 -- Save
 map("n", "<leader>w", "<CMD>update<CR>")
 
