@@ -2,41 +2,39 @@ return {
 	"romgrk/barbar.nvim",
 	dependencies = {
 		"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
-		"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+		--"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
 	},
 
 	config = function()
 		require("barbar").setup({
 
-			--	vim.g.barbar_auto_setup = false,
+			barbar_auto_setup = false,
 			-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-			highlights = {
-				background = {
-					guibg = "#000000",
-				},
-				buffer_visible = {
-					guifg = "#abb2bf", -- Foreground color of visible buffers
-				},
-			},
 			animation = false,
 			insert_at_start = false,
 			clickable = true,
 			focus_on_close = "left",
-			tabpages = true,
+			--tabpages = true,
 			icons = {
+				button = "×",
+				modified = { button = "●" },
+				separator = { left = "▎", right = "" },
+				filetype = {
+					custom_colors = false,
+					enabled = false,
+				},
+				preset = "default",
+				buffer_index = false,
+				buffer_number = false,
 				gitsigns = {
 					added = { enabled = true, icon = "+" },
 					changed = { enabled = true, icon = "~" },
 					deleted = { enabled = true, icon = "-" },
 				},
-				inactive = { button = "×" },
-				current = { buffer_index = true },
 			},
-			no_name_title = "[X]",
-			sidebar_filetypes = {
-				-- Use the default values: {event = 'BufWinLeave', text = '', align = 'left'}
-				["neo-tree"] = { event = "BufWipeout" },
-			}, -- …etc.
+			maximum_length = 10,
+			minimum_padding = 2,
+			no_name_title = ".",
 			sort = {
 				-- tells barbar to ignore case differences while sorting buffers
 				ignore_case = true,
@@ -66,6 +64,8 @@ return {
 		keymap.set("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
 		-- Close buffer
 		keymap.set("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+		keymap.set("n", "<A-C>", "<Cmd>BufferCloseAllButCurrentOrPinned<CR>", opts)
+		-- keymap.set("n", "<A-X>", "<Cmd>BufferWipeout<CR>", opts)
 		-- Wipeout buffer
 		--                 :BufferWipeout
 		-- Close commands
