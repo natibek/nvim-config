@@ -11,6 +11,7 @@ return {
 		vim.api.nvim_set_hl(0, "WhichKeyFloat", { bg = "None", fg = "#488DFF" })
 		vim.api.nvim_set_hl(0, "BufferTabpageFill", { fg = "None" })
 		vim.api.nvim_set_hl(0, "VertSplit", { bg = "#488DFF", fg = "#488DFF" })
+
 		vim.api.nvim_set_hl(0, "BqfPreviewBorder", { link = "FloatBorder" })
 		vim.api.nvim_set_hl(0, "BufferInactiveIndex", { link = "BufferInactive" })
 		vim.api.nvim_set_hl(0, "LspInfoBorder", { link = "FloatBorder" })

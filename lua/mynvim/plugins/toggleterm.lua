@@ -7,12 +7,9 @@ return {
 			open_mapping = [[<F7>]],
 			shading_factor = 2,
 			direction = "float",
+			start_in_insert = true,
 			float_opts = {
 				border = "curved",
-				highlights = {
-					border = "Normal",
-					background = "Normal",
-				},
 			},
 		})
 	end,
