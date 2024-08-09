@@ -7,7 +7,7 @@ return {
 			open_mapping = [[<F7>]],
 			shading_factor = 2,
 			direction = "float",
-			start_in_insert = true,
+			start_in_insert = false,
 			float_opts = {
 				border = "double",
 			},
