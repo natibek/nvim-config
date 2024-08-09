@@ -21,8 +21,8 @@ map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
 map("n", "<leader>r", "<CMD>Neotree focus<CR>")
 
 -- New Windows
-map("n", "<leader>o", "<CMD>vsplit<CR>")
-map("n", "<leader>p", "<CMD>split<CR>")
+map("n", "<leader>h", "<CMD>vsplit<CR>")
+map("n", "<leader>v", "<CMD>split<CR>")
 
 -- Window Navigation
 map("n", "<C-h>", "<C-w>h")
