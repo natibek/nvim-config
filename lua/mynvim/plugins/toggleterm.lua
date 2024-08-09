@@ -9,8 +9,11 @@ return {
 			direction = "float",
 			start_in_insert = true,
 			float_opts = {
-				border = "curved",
+				border = "double",
 			},
+			on_open = function(term)
+				vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", { noremap = true, silent = true })
+			end,
 		})
 	end,
 }
