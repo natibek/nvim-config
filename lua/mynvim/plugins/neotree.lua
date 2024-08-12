@@ -9,6 +9,8 @@ return {
 	},
 	config = function()
 		require("neo-tree").setup({
+			popup_border_style = "double",
+			sort_case_insensitive = true,
 			default_component_configs = {
 				container = {
 					enable_character_fade = true,
@@ -53,10 +55,10 @@ return {
 						deleted = "✖", -- this can only be used in the git_status source
 						renamed = "R", -- this can only be used in the git_status source
 						-- Status type
-						untracked = "",
+						untracked = "??",
 						ignored = "I",
-						unstaged = "U",
-						staged = "",
+						unstaged = "u",
+						staged = "S",
 						conflict = "C",
 					},
 				},
