@@ -3,6 +3,8 @@ return {
 	lazy = false,
 	priority = 1000,
 	config = function()
+		--vim.cmd("colorscheme evening")
+
 		vim.cmd("colorscheme tokyodark")
 		local c = require("tokyodark.palette")
 		-- Floats/Windows
@@ -32,7 +34,10 @@ return {
 
 		-- Bufferline
 		vim.api.nvim_set_hl(0, "BufferCurrentMod", { fg = "#488DFF" })
+		--	vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = "#488DFF" }) --c.cyan0 })
 		vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = c.cyan0 })
+		--vim.api.nvim_set_hl(0, "BufferInactiveSign", { bg = "#202331", fg = "#16161e" }) --c.dark3 })
+		--vim.api.nvim_set_hl(0, "BufferInactiveMod", { bg = "NONE", fg = "#16161e" }) --c.yellow })
 		vim.api.nvim_set_hl(0, "BufferInactiveSign", { bg = "#202331", fg = c.dark3 })
 		vim.api.nvim_set_hl(0, "BufferInactiveMod", { bg = "NONE", fg = c.yellow })
 
