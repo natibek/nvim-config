@@ -15,6 +15,7 @@ map("n", "<leader>q", "<CMD>q<CR>")
 -- Move right and left in Insert mode
 map("i", "jl", "<Right>")
 map("i", "jk", "<Left>")
+map("i", "<C-d>", "<Esc>dbxi")
 
 -- NeoTree
 map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
