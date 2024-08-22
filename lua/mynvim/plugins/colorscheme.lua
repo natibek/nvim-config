@@ -18,6 +18,8 @@ return {
 		vim.api.nvim_set_hl(0, "BufferInactiveIndex", { link = "BufferInactive" })
 		vim.api.nvim_set_hl(0, "LspInfoBorder", { link = "FloatBorder" })
 
+		-- Comments
+		vim.api.nvim_set_hl(0, "Comment", { bg = "#202331", fg = "#488Daa" })
 		-- Tree
 		vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", { bg = "None", fg = "None" })
 
