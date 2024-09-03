@@ -2,7 +2,7 @@ return {
 	"romgrk/barbar.nvim",
 	dependencies = {
 		"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
-		--"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+		"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
 	},
 
 	config = function()
@@ -26,11 +26,11 @@ return {
 				preset = "default",
 				buffer_index = false,
 				buffer_number = false,
-				gitsigns = {
-					added = { enabled = true, icon = "+" },
-					changed = { enabled = true, icon = "~" },
-					deleted = { enabled = true, icon = "-" },
-				},
+				--	gitsigns = {
+				--		added = { enabled = true, icon = "+" },
+				--		changed = { enabled = true, icon = "~" },
+				--		deleted = { enabled = true, icon = "-" },
+				--	},
 			},
 			maximum_length = 10,
 			minimum_padding = 2,
