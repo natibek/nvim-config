@@ -11,7 +11,6 @@ return {
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "None", fg = "#488DFF" })
 		vim.api.nvim_set_hl(0, "FloatBorder", { bg = "None", fg = "#488DFF" })
 		vim.api.nvim_set_hl(0, "WhichKeyFloat", { bg = "None", fg = "#488DFF" })
-		vim.api.nvim_set_hl(0, "BufferTabpageFill", { fg = "None" })
 		vim.api.nvim_set_hl(0, "VertSplit", { bg = "#488DFF", fg = "#488DFF" })
 
 		vim.api.nvim_set_hl(0, "BqfPreviewBorder", { link = "FloatBorder" })
@@ -35,14 +34,33 @@ return {
 		vim.api.nvim_set_hl(0, "LspInlayHint", { link = "LspCodeLens" })
 
 		-- Bufferline
-		vim.api.nvim_set_hl(0, "BufferCurrentMod", { fg = "#488DFF" })
-		--	vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = "#488DFF" }) --c.cyan0 })
-		vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = c.cyan0 })
-		--vim.api.nvim_set_hl(0, "BufferInactiveSign", { bg = "#202331", fg = "#16161e" }) --c.dark3 })
-		--vim.api.nvim_set_hl(0, "BufferInactiveMod", { bg = "NONE", fg = "#16161e" }) --c.yellow })
-		vim.api.nvim_set_hl(0, "BufferInactiveSign", { bg = "#202331", fg = c.dark3 })
-		vim.api.nvim_set_hl(0, "BufferInactiveMod", { bg = "NONE", fg = c.yellow })
+		-- 488DFF (dark blue)
+		-- 488Daa (light bluegreen)
+		-- 005555 (green)
+		-- 118888 (dark green)
+		-- 44475A (gray)
+		-- d7a65f (yellow)
+		-- d7a6aa (pink)
 
-		vim.api.nvim_set_hl(0, "BufferLineOffsetSeparator", { bg = "#16161e", fg = "#16161e" })
+		vim.api.nvim_set_hl(0, "BufferCurrent", { bg = "#005555" })
+		vim.api.nvim_set_hl(0, "BufferCurrentMod", { bg = "None", fg = "#488Daa" })
+		vim.api.nvim_set_hl(0, "BufferCurrentSign", { bg = "None", fg = "#005555" })
+		vim.api.nvim_set_hl(0, "BufferCurrentSignRight", { bg = "None", fg = "#005555" })
+
+		vim.api.nvim_set_hl(0, "BufferInactive", { bg = "#44475A" })
+		vim.api.nvim_set_hl(0, "BufferInactiveSign", { bg = "None", fg = "#005555" })
+		vim.api.nvim_set_hl(0, "BufferInactiveMod", { bg = "None", fg = "#d7a699" })
+		vim.api.nvim_set_hl(0, "BufferInactiveSign", { bg = "None", fg = "#005555" })
+
+		vim.api.nvim_set_hl(0, "BufferVisible", { bg = "#44475A" })
+		vim.api.nvim_set_hl(0, "BufferVisibleSign", { bg = "None", fg = "#005555" })
+		vim.api.nvim_set_hl(0, "BufferVisibleMod", { bg = "None", fg = "#488Daa" })
+		vim.api.nvim_set_hl(0, "BufferVisibleSign", { bg = "None", fg = "#005555" })
+
+		vim.api.nvim_set_hl(0, "BufferTabpageFill", { fg = "None" })
+		vim.api.nvim_set_hl(0, "BufferTabpages", { bg = "None", fg = "#488daa" })
+		vim.api.nvim_set_hl(0, "BufferTabpagesSep", { bg = "None" })
+
+		-- vim.api.nvim_set_hl(0, "BufferLineOffsetSeparator", { bg = "#16161e", fg = "#16161e" })
 	end,
 }

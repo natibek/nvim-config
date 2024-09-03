@@ -14,7 +14,7 @@ return {
 			insert_at_start = false,
 			clickable = true,
 			focus_on_close = "left",
-			--tabpages = true,
+			tabpages = true,
 			icons = {
 				button = "×",
 				modified = { button = "●" },
