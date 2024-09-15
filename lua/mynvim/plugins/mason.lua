@@ -23,6 +23,7 @@ return {
 
 		require("mason-tool-installer").setup({
 			ensure_installed = {
+				"clang-format",
 				"prettier",
 				"stylua", -- lua formatter
 				"isort", -- python formatter
