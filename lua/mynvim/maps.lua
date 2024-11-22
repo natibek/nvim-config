@@ -38,4 +38,5 @@ map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
 
 -- Toggle Terminal
-map("t", "<leader><esc>", [[<C-\><C-n>]])
+map("t", "<esc>", [[<C-\><C-n>]])
+map("n", "<leader>;", "<CMD>ToggleTerm<CR>")
