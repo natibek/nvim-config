@@ -10,12 +10,12 @@ return {
 		require("mason-lspconfig").setup({
 			automatic_installation = true,
 			ensure_installed = {
-				"clangd",
+				"harper_ls",
 				"cssls",
 				"eslint",
 				"html",
 				"jsonls",
-				"tsserver",
+				--				"tsserver",
 				"pyright",
 				"tailwindcss",
 			},
