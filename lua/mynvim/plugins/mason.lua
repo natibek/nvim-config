@@ -10,7 +10,7 @@ return {
 		require("mason-lspconfig").setup({
 			automatic_installation = true,
 			ensure_installed = {
-				"harper_ls",
+				-- "harper_ls",
 				"cssls",
 				"eslint",
 				"html",

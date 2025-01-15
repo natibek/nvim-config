@@ -66,7 +66,7 @@ return {
 			enable_github_status = true,
 			filesystem = {
 				filtered_items = {
-					visible = true,
+					visible = false,
 					show_hidden_count = true,
 					hide_dotfiles = true,
 					hide_gitignored = true,
